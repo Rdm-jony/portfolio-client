@@ -1,16 +1,12 @@
 import Navbar from "../Shared/Navbar";
 import Footer from "../Shared/Footer";
-import Banner from "../Pages/Banner";
-import About from "../Pages/About";
+import { Outlet } from "react-router-dom";
 
 const Main = () => {
     return (
-        <div>
+        <div className="bg-gray-50 dark:bg-black ">
             <Navbar></Navbar>
-            <div className="max-w-6xl mx-auto">
-                <Banner></Banner>
-                <About></About>
-            </div>
+            <Outlet></Outlet>
 
             <Footer></Footer>
         </div>
