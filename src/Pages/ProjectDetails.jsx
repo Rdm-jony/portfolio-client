@@ -34,6 +34,12 @@ const ProjectDetails = () => {
                 <div className="p-6 space-y-6 bg-white dark:bg-slate-950 w-full md:w-2/3">
                     <h2 className="text-3xl font-extrabold text-gray-800 dark:text-white text-center md:text-left">{title}</h2>
                     <p className="text-justify  font-light">{description}</p>
+                    {
+                        project?.admin && <div>
+                            <p className="font-semibold text-orange-400">Admin Email: {`< ${project?.admin?.email} >`}</p>
+                            <p className="font-semibold text-orange-400">Admin Pass: {`< ${project?.admin?.pass} >`}</p>
+                        </div>
+                    }
                     <div className="flex flex-wrap gap-5">
                         {
                             tools?.map((tool, idx) => <div key={idx} className='border p-3 rounded-md tooltip' data-tip={tool.name}>
